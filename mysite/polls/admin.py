@@ -1,6 +1,8 @@
 from django.contrib import admin
+from .models import Question
 
 # Register your models here.
 
-from .models import Question
-admin.site.register(Question)
+class QuestionAdmin(admin.ModelAdmin):
+    list_display = ('id', 'question_text', 'pub_date')
+admin.site.register(Question,QuestionAdmin)
