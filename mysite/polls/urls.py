@@ -3,6 +3,7 @@ from django.urls import path
 
 from . import views
 
+app_name = "polls"
 urlpatterns = [
     # 初期ページのURL
     # views.関数名,nameは、
